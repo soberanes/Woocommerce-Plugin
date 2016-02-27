@@ -3,7 +3,7 @@
 * Plugin name: Factura punto com para woocommerce
 * Plugin URI: http://factura.com
 * Description: Conecta tu tienda de woocommerce para que tus clientes puedan facturar todos los pedidos.
-* Version: 1.3
+* Version: 1.4
 * Author: Factura.com
 */
 
@@ -11,7 +11,7 @@ include( plugin_dir_path( __FILE__ ) . 'inc/factura-wrapper.php');
 
 define( 'FACTURACOM__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'FACTURACOM__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-define( 'FACTURACOM__APIURL', 'http://devfactura.in/api/v1/');
+define( 'FACTURACOM__APIURL', 'https://factura.com/api/v1/');
 
 //init hooks
 add_action( 'init', 'facturacom_scripts' );
@@ -59,9 +59,16 @@ function facturacom_menu(){
 }
 
 function facturacom_scripts() {
+   wp_register_script( "data_tables_script", '//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js', array('jquery') );
+   wp_register_script( "data_tables_script", FACTURACOM__PLUGIN_URL . 'assets/bootbox.js', array('jquery') );
+   wp_register_script( "bootstrap_script", '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js', array('jquery') );
+   wp_register_script( "bootbox_script", FACTURACOM__PLUGIN_URL . 'assets/bootbox.js', array('jquery') );
    wp_register_script( "facturacom_script", FACTURACOM__PLUGIN_URL . 'assets/facturacom.js', array('jquery') );
    wp_localize_script( 'facturacom_script', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));
    wp_enqueue_script( 'jquery' );
+   wp_enqueue_script( 'data_tables_script' );
+   wp_enqueue_script( 'bootstrap_script' );
+   wp_enqueue_script( 'bootbox_script' );
    wp_enqueue_script( 'facturacom_script' );
 }
 
@@ -107,13 +114,14 @@ function facturacom_history(){
     $settings = FacturaWrapper::getConfigEntity();
     ?>
     <h1><strong><?php echo count($invoices->data) ?></strong> facturas en sistema.</h1>
-    <table class="wp-list-table widefat fixed striped posts">
+    <table class="wp-list-table widefat fixed striped posts" id="invoicesTable">
         <thead>
             <th>Folio</th>
             <th>Fecha de timbrado</th>
             <th>RFC receptor</th>
             <th>Pedido</th>
             <th>Estado</th>
+            <th>Monto</th>
             <th>PDF</th>
             <th>XML</th>
             <th>Opciones</th>
@@ -129,16 +137,19 @@ function facturacom_history(){
                     <a href="<?php echo get_site_url(); ?>/wp-admin/post.php?post=<?php echo $invoice->NumOrder ?>&action=edit"><?php echo $invoice->NumOrder ?></a> de
                     <a href="<?php echo get_site_url(); ?>/wp-admin/user-edit.php?user_id=<?php echo $invoice->ReferenceClient ?>"><?php echo $wpuser->data->user_nicename ?></a>
                 </td>
-                <td><?php echo $invoice->Status ?></td>
+                <td><?php echo ucfirst($invoice->Status) ?></td>
+                <td><?php echo "$".$invoice->Total ?></td>
                 <td><a href="http://devfactura.in/api/publica/invoice/<?php echo $invoice->UID ?>/pdf">PDF</a></td>
                 <td><a href="http://devfactura.in/api/publica/invoice/<?php echo $invoice->UID ?>/xml">XML</a></td>
                 <td>
                     <a href="#" class="button button-primary send_invoice" data-uid="<?php echo $invoice->UID ?>">
                         Enviar por correo
                     </a>
+                    <?php if($invoice->Status != "cancelada"): ?>
                     <a href="#" class="button button-secundary cancel_invoice" data-uid="<?php echo $invoice->UID ?>">
                         Cancelar
                     </a>
+                    <?php endif ?>
                 </td>
             </tr>
             <?php endforeach ?>
@@ -256,9 +267,9 @@ function form_shortcode(){
 }
 
 function styles_factura_enqueuer(){
-    // Register the style like this for a plugin:
+    wp_register_style( 'data-tables-style', '//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css', array(), '20120208', 'all' );
+    wp_enqueue_style( 'data-tables-style' );
     wp_register_style( 'factura-com-style', plugins_url( 'assets/facturacom.css', __FILE__ ), array(), '20120208', 'all' );
-    // For either a plugin or a theme, you can then enqueue the style:
     wp_enqueue_style( 'factura-com-style' );
 }
 
