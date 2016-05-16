@@ -502,7 +502,7 @@ html.remodal-is-locked {
     color: #4C637B;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    height: 43px
+    height: 43px;
 }
 
 #f-step-one-form label,
@@ -515,7 +515,7 @@ html.remodal-is-locked {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     border: 1px solid #c2c2c2;
-    border-radius: 5px 0 0 5px
+    border-radius: 5px 0 0 5px;
 }
 
 .error_msj,
