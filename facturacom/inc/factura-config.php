@@ -36,6 +36,16 @@ class FacturaConfig {
         fwrite($configFile, ApiHelper::strEncode($settings['colorheader'])."\n");
         //write colorfont
         fwrite($configFile, ApiHelper::strEncode($settings['colorfont'])."\n");
+        //write emisor name
+        fwrite($configFile, ApiHelper::strEncode($settings['emisor_name'])."\n");
+        //write emisor rfc
+        fwrite($configFile, ApiHelper::strEncode($settings['emisor_rfc'])."\n");
+        //write emisor address1
+        fwrite($configFile, ApiHelper::strEncode($settings['emisor_address1'])."\n");
+        //write emisor address2
+        fwrite($configFile, ApiHelper::strEncode($settings['emisor_address2'])."\n");
+        //write emisor address3
+        fwrite($configFile, ApiHelper::strEncode($settings['emisor_address3'])."\n");
         fclose($configFile);
 
         // @TODO validate the file has been written successfully
@@ -60,6 +70,11 @@ class FacturaConfig {
             'description' => ApiHelper::strDecode($configVars[6]),
             'colorheader' => ApiHelper::strDecode($configVars[7]),
             'colorfont' => ApiHelper::strDecode($configVars[8]),
+            'emisor_name' => ApiHelper::strDecode($configVars[9]),
+            'emisor_rfc' => ApiHelper::strDecode($configVars[10]),
+            'emisor_address1' => ApiHelper::strDecode($configVars[11]),
+            'emisor_address2' => ApiHelper::strDecode($configVars[12]),
+            'emisor_address3' => ApiHelper::strDecode($configVars[13]),
         );
     }
 

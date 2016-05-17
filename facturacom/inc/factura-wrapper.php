@@ -643,7 +643,7 @@ class FacturaWrapper{
           "currencie"     => $order->currency,
           "iva"           => 1,
           "num_order"     => $order->id,
-          "seriefactura"  => "F",
+          "seriefactura"  => $configEntity['serie'],
           "save"          => "true",
           "descuento"     => $order->total_discount / 1.16,
         );

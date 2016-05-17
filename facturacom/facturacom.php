@@ -3,7 +3,7 @@
 * Plugin name: Factura punto com para woocommerce
 * Plugin URI: http://factura.com
 * Description: Conecta tu tienda de woocommerce para que tus clientes puedan facturar todos los pedidos.
-* Version: 1.4
+* Version: 1.5
 * Author: Factura.com
 */
 
@@ -12,6 +12,7 @@ include( plugin_dir_path( __FILE__ ) . 'inc/factura-wrapper.php');
 define( 'FACTURACOM__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'FACTURACOM__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'FACTURACOM__APIURL', 'https://factura.com/api/v1/');
+define( 'FACTURACOM__SYSURL', 'https://factura.com/api/');
 
 //init hooks
 add_action( 'init', 'facturacom_scripts' );
@@ -21,7 +22,6 @@ add_shortcode('facturacom_form', 'form_shortcode');
 
 /**
  * Register new status
- * Tutorial: http://www.sellwithwp.com/woocommerce-custom-order-status-2/
 **/
 function register_invoiced_order_status() {
     register_post_status( 'wc-invoiced', array(
@@ -113,7 +113,7 @@ function facturacom_history(){
     $index    = 0;
     $settings = FacturaWrapper::getConfigEntity();
     ?>
-    <h1><strong><?php echo count($invoices->data) ?></strong> facturas en sistema.</h1>
+    <h1><strong><?php echo (isset($invoices->data)) ? count($invoices->data) : 0 ?></strong> facturas en sistema.</h1>
     <table class="wp-list-table widefat fixed striped posts" id="invoicesTable">
         <thead>
             <th>Folio</th>
@@ -127,32 +127,40 @@ function facturacom_history(){
             <th>Opciones</th>
         </thead>
         <tbody>
-            <?php foreach ($invoices->data as $invoice): ?>
-            <tr>
-                <td><?php echo $invoice->Folio ?></td>
-                <td><?php echo $invoice->FechaTimbrado ?></td>
-                <td><?php echo $invoice->Receptor ?></td>
-                <?php $wpuser = get_user_by('id','1'); ?>
-                <td>
-                    <a href="<?php echo get_site_url(); ?>/wp-admin/post.php?post=<?php echo $invoice->NumOrder ?>&action=edit"><?php echo $invoice->NumOrder ?></a> de
-                    <a href="<?php echo get_site_url(); ?>/wp-admin/user-edit.php?user_id=<?php echo $invoice->ReferenceClient ?>"><?php echo $wpuser->data->user_nicename ?></a>
-                </td>
-                <td><?php echo ucfirst($invoice->Status) ?></td>
-                <td><?php echo "$".$invoice->Total ?></td>
-                <td><a href="http://devfactura.in/api/publica/invoice/<?php echo $invoice->UID ?>/pdf">PDF</a></td>
-                <td><a href="http://devfactura.in/api/publica/invoice/<?php echo $invoice->UID ?>/xml">XML</a></td>
-                <td>
-                    <a href="#" class="button button-primary send_invoice" data-uid="<?php echo $invoice->UID ?>">
-                        Enviar por correo
-                    </a>
-                    <?php if($invoice->Status != "cancelada"): ?>
-                    <a href="#" class="button button-secundary cancel_invoice" data-uid="<?php echo $invoice->UID ?>">
-                        Cancelar
-                    </a>
-                    <?php endif ?>
-                </td>
-            </tr>
-            <?php endforeach ?>
+            <?php if(isset($invoices->data)): ?>
+                <?php foreach ($invoices->data as $invoice): ?>
+                <tr>
+                    <td><?php echo $invoice->Folio ?></td>
+                    <td><?php echo $invoice->FechaTimbrado ?></td>
+                    <td><?php echo $invoice->Receptor ?></td>
+                    <?php $wpuser = get_user_by('id','1'); ?>
+                    <td>
+                        <a href="<?php echo get_site_url(); ?>/wp-admin/post.php?post=<?php echo $invoice->NumOrder ?>&action=edit"><?php echo $invoice->NumOrder ?></a> de
+                        <a href="<?php echo get_site_url(); ?>/wp-admin/user-edit.php?user_id=<?php echo $invoice->ReferenceClient ?>"><?php echo $wpuser->data->user_nicename ?></a>
+                    </td>
+                    <td><?php echo ucfirst($invoice->Status) ?></td>
+                    <td><?php echo "$".$invoice->Total ?></td>
+                    <td><a href="<?php echo FACTURACOM__SYSURL ?>publica/invoice/<?php echo $invoice->UID ?>/pdf">PDF</a></td>
+                    <td><a href="<?php echo FACTURACOM__SYSURL ?>publica/invoice/<?php echo $invoice->UID ?>/xml">XML</a></td>
+                    <td>
+                        <a href="#" class="button button-primary send_invoice" data-uid="<?php echo $invoice->UID ?>">
+                            Enviar por correo
+                        </a>
+                        <?php if($invoice->Status != "cancelada"): ?>
+                        <a href="#" class="button button-secundary cancel_invoice" data-uid="<?php echo $invoice->UID ?>">
+                            Cancelar
+                        </a>
+                        <?php endif ?>
+                    </td>
+                </tr>
+                <?php endforeach ?>
+            <?php else: ?>
+                <tr>
+                    <td colspan="9" align="center">
+                        No hay información disponible
+                    </td>
+                </tr>
+            <?php endif ?>
         </tbody>
     </table>
     <?php
@@ -164,6 +172,11 @@ function facturacom_settings(){
     <form id="facturacom_settings" method="post">
         <table class="form-table">
     		<tbody>
+                <tr>
+                    <th colspan="2">
+                        <h3>Datos de Factura.com</h3>
+                    </th>
+                </tr>
                 <tr valign="top">
         			<th scope="row" class="titledesc">
         				<label for="apikey">Api Key*</label>
@@ -206,7 +219,7 @@ function facturacom_settings(){
         		</tr>
                 <tr>
                     <th colspan="2">
-                        <hr>
+                        <h3>Configuración del widget</h3>
                     </th>
                 </tr>
                 <tr valign="top">
@@ -246,6 +259,48 @@ function facturacom_settings(){
                     <td class="forminp">
                         <fieldset>
                             <input type="color" name="front-title" value="<?php echo $settings['colorfont'] ?>" style="width: 710px">
+                        </fieldset>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th colspan="2">
+                        <h3>Datos de Emisor</h3>
+                    </th>
+                </tr>
+                <tr valign="top">
+                    <th scope="row" class="titledesc">
+                        <label for="front-title">Razón social del emisor</label>
+                    </th>
+                    <td class="forminp">
+                        <fieldset>
+                            <input type="text" name="front-title" value="<?php echo $settings['emisor_name'] ?>" style="width: 710px">
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row" class="titledesc">
+                        <label for="front-title">RFC del emisor</label>
+                    </th>
+                    <td class="forminp">
+                        <fieldset>
+                            <input type="text" name="front-title" value="<?php echo $settings['emisor_rfc'] ?>" style="width: 710px">
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row" class="titledesc">
+                        <label for="front-title">Dirección del emisor</label>
+                    </th>
+                    <td class="forminp">
+                        <fieldset>
+                            <input type="text" name="front-title" value="<?php echo $settings['emisor_address1'] ?>" style="width: 710px">
+                        </fieldset><br />
+                        <fieldset>
+                            <input type="text" name="front-title" value="<?php echo $settings['emisor_address2'] ?>" style="width: 710px">
+                        </fieldset><br />
+                        <fieldset>
+                            <input type="text" name="front-title" value="<?php echo $settings['emisor_address3'] ?>" style="width: 710px">
                         </fieldset>
                     </td>
                 </tr>
@@ -307,6 +362,11 @@ function save_config_callback() {
         'description' => $_POST['description'],
         'colorheader' => $_POST['colorheader'],
         'colorfont'   => $_POST['colorfont'],
+        'emisor_name' => $_POST['emisor_name'],
+        'emisor_rfc' => $_POST['emisor_rfc'],
+        'emisor_address1' => $_POST['emisor_address1'],
+        'emisor_address2' => $_POST['emisor_address2'],
+        'emisor_address3' => $_POST['emisor_address3'],
     );
 
     $saved = FacturaWrapper::saveSettings($settings);
@@ -378,11 +438,19 @@ function create_client_callback(){
 
     $customerNewData = FacturaWrapper::create_client($_REQUEST, $_REQUEST["order"]);
     FacturaWrapper::saveCookies('customer', $customerNewData->Data);
+    $settings = FacturaWrapper::getConfigEntity();
 
     $response = array(
       'success' => true,
       'customer' => FacturaWrapper::getCookies('customer'),
       'order' => FacturaWrapper::getCookies('order'),
+      'emisor' => array(
+          'name' => $settings['emisor_name'],
+          'rfc' => $settings['emisor_rfc'],
+          'address1' => $settings['emisor_address1'],
+          'address2' => $settings['emisor_address2'],
+          'address3' => $settings['emisor_address3'],
+      )
     );
 
   }else{

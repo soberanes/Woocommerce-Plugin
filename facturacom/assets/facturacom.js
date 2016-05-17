@@ -61,6 +61,11 @@ jQuery(document).ready( function($) {
               description : form_data[5].value,
               colorheader : form_data[6].value,
               colorfont   : form_data[7].value,
+              emisor_name : form_data[8].value,
+              emisor_rfc  : form_data[9].value,
+              emisor_address1 : form_data[10].value,
+              emisor_address2 : form_data[11].value,
+              emisor_address3 : form_data[12].value,
             }
 
             $.post(myAjax.ajaxurl, data, function(response){
@@ -280,7 +285,7 @@ jQuery(document).ready( function($) {
       }
     }
 
-    function fillInvoiceContainer(order_data, customer_data){
+    function fillInvoiceContainer(order_data, customer_data, emisor_data){
 
         $('#invoice-id').hide();
         $('#invoice-date').hide();
@@ -294,11 +299,13 @@ jQuery(document).ready( function($) {
         //$('#receptor-email').text(invoice_data.Data.Contacto.Email);
 
         //emisor
-        $('#emisor-nombre').text("UNMANNED SYSTEMS S A P I DE CV");
-        $('#emisor-rfc').text("USY141002JX2");
-        $('#emisor-direccion').text("López Mateos 400 Int: Piso 8");
-        $('#emisor-direccion-zone').text("Ladrón de Guevara. CP: 44650");
-        $('#emisor-direccion-zone-city').text("Guadalajara, Jalisco, México.");
+        if(emisor_data.name){
+            $('#emisor-nombre').text(emisor_data.name);
+            $('#emisor-rfc').text(emisor_data.rfc);
+            $('#emisor-direccion').text(emisor_data.address1);
+            $('#emisor-direccion-zone').text(emisor_data.address2);
+            $('#emisor-direccion-zone-city').text(emisor_data.address3);
+        }
 
         //products
         var subtotal = 0;
@@ -575,8 +582,6 @@ jQuery(document).ready( function($) {
             var orderData    = getCookie('order');
             */
 
-            console.log(response.metadata);
-
             if(response.metadata != null && response.metadata.code == 101){
                 $('#result-msg-title').text(response.message);
                 // $('#btn-success-email').stop().show().attr('data-invoice', response.metadata.uid);
@@ -656,13 +661,16 @@ jQuery(document).ready( function($) {
         $("#step-two .loader_content").hide();
         var customer_data = response.customer;
         var order_data    = response.order;
+        var emisor_data   = response.emisor;
+
+        console.log(emisor_data);
 
         if(!response.success){
             var inst = $('[data-remodal-id=respuesta-paso-dos]').remodal();
             $('#message-response-dos').text(response.message);
             inst.open();
         }else{
-          fillInvoiceContainer(order_data, customer_data);
+          fillInvoiceContainer(order_data, customer_data, emisor_data);
           $('#step-two').stop().hide();
           $('#step-three').stop().fadeIn('slow');
         }

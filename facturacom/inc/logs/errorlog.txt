@@ -1279,3 +1279,578 @@ F-SECRET-KEY:JDJ5JDEwJDZaTjRhWDVVRXh3ejZIRmxEU1pjeE9GMVRHakh4OGY0MG5lRS5DclhISGF
 < Content-Type: application/json
 < 
 * Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:00:52 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IkVhYWppck12NSs0U2plZmdIZkcyTEE9PSIsInZhbHVlIjoiZ2JhNjg4czcwK1RHMGttYmwzVjNIZjRyRFwvZURkb2ZlYTd6Qmhpc0hoSWtxUGdycWRmWnhEbVVmWEFicnhkcEhIZ1FOa3ZDRFl3aEpIaFVmSzMrWUp3PT0iLCJtYWMiOiJiYmNiOWMxMjRlZjM3NzlhMDMxNjEwN2I4NmYzNzFlMzFiMzc2NjAxOGNmMWM4MzEyYjZmNmQxMjkxNDU5OTRhIn0%3D; expires=Tue, 17-May-2016 01:00:52 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:02:14 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IjNPcSszNFJMTEo1ZklBR01HT3NaeWc9PSIsInZhbHVlIjoiTmVNWU9ZRG5vZFZ1TlNPSnliSENNXC95cnM2eXU5S3Z2UEJ6b1VyN2lhdkNVK2ZiK2VwNVllWkcwZERiaHhSYTdKYWhQOGNNRWFLWUgrQ1lqOXNkbXh3PT0iLCJtYWMiOiJkZDU3NGYyODFmOGY3Yjk2NDU0YTNkZGZjNGU1ODgwZTYzOTU1YmQwNWVkMzk4MDJhN2U5NWZhODU0ODg0ZmIxIn0%3D; expires=Tue, 17-May-2016 01:02:14 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:02:38 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6InEwN0tMeVNMeFVTNkptcERNWnNtaVE9PSIsInZhbHVlIjoiWmFCTSsxcDVvSkpRWVY4WUVPWWJyaUdBNDRWU2NsWHV0NVBoa252Sk1ZQzZHajlkNzJwcVwvczRuaVVwWU5CZGhBZkRiZDlSQjFKaktcL3N0R1VtdzN6QT09IiwibWFjIjoiZWIyMzM2NjY1ODY3M2YzNzgwNmYwYzExZGY3NjU0MzFkN2NlNzQ3YTAzN2U2YjE4ZDdlZjQxYzY1NDBhMTcxOCJ9; expires=Tue, 17-May-2016 01:02:38 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+* Hostname devfactura.in was found in DNS cache
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:02:49 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6InNhSCt6KytIdkxcL0FTYXdJUDZNMlRBPT0iLCJ2YWx1ZSI6IktRQTVpaDd6RnByYjNGMTFNSjZmYk9BNHNMejZXeTdMbVR6WENxRFZ4TmE3NnVCSVROc3A3SXN3Z1I2TFwvYkF3S1wvUWFpRXk1OU9nN2w0QjNIelUrN2c9PSIsIm1hYyI6IjZhZWFmZjU1YTY2ZTE0ZDQxMDQzZmNjZmI0OWUyYmE3MTE5OTBiOWJjNmI1OGRjNGYwZDg5MWRhMTY0ZWQ4NjAifQ%3D%3D; expires=Tue, 17-May-2016 01:02:49 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+* Hostname devfactura.in was found in DNS cache
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:03:13 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6Ik5kSEZiNFJIbWEzSExqTk51d0ZnNWc9PSIsInZhbHVlIjoiOFhmVnJjOFZ5d1BnMGJad1d4STVVTW5IOWRqejM3SmpNVCtLTE5Ydk91VkhjR3ROK05PUFZuYitZZ0JrSXBVck51cUtNcVpKUmxycW1LV1JjdnQ1Snc9PSIsIm1hYyI6ImZmYTAwYjU0MDdhZDU5OTM0ZTc1YTk5OGI5YzQzZjU0ZTI4MWIzOGVlYTE5NGIwYzcyNTJiNDg2MDUyODhjNjYifQ%3D%3D; expires=Tue, 17-May-2016 01:03:13 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:08:14 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IjQ3R25QSWhQemhOUUY3WW9peGNxTmc9PSIsInZhbHVlIjoiTGsyK2ZZcUZQclYyTGEwUFJIblFTaHhkTjI4dURnT3NqNTNEcHlTNFJLaW1lQnVhMFNoR0xIS2lLNWhESGgxd2M3bFVSU1hpNmRoRUdBVFhxRmdhWVE9PSIsIm1hYyI6ImJkZGMwMjg1YWE4ZWRjYTQ4NmRmZDY2YmM1YjFiYTExYzBkMjc0NzYzZGY3NDNjN2MxMDY2NTI1ODU0ZmM5YWEifQ%3D%3D; expires=Tue, 17-May-2016 01:08:14 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:08:56 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6Im1ZSU1KM1VweFdJaDJkZkFXcFl2Vmc9PSIsInZhbHVlIjoiNjYxWHc3clVkV29ER1VTY0F5RFZlWURsK0tHOU5BcktrdzQzNGVJeDRsR2xyV0oyV3JzSjVNK1FMWDR2K2l1ZVg0cXBaMVRraDhMZEY5Y3I0MGFPRGc9PSIsIm1hYyI6IjQ0YzQ1ZTIzOTUwZTczNjIwNzdjZTljMmQ5MDRlMWMzZDM3OWIzYWJlZDUyMTBkN2Y4OTNhYzQxYTI5ZDhlZTMifQ%3D%3D; expires=Tue, 17-May-2016 01:08:56 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+* Hostname devfactura.in was found in DNS cache
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:09:18 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6ImNQOVRKWnZUUnBcL3pIU2ZjZEJGdVRRPT0iLCJ2YWx1ZSI6IlF2VWVVQnZMbnlZdFRDTlB6cDMzb2FReXk2c29YaENuUEEwNldESXZMdkhqN2VDNkJsQ2hBRnkyMHROMWhHVmtXdXVZaU1MV3VNcElzeUJ3NVBVSVZnPT0iLCJtYWMiOiI0ZDQyYmY3MzMwNTYwMmRkZjI1NDk2ODQzMTc3ZTI3NGU4ZTcxMGJiYjVkZmEwNzkyMmMwZTNhYTk5ZmM5ODE4In0%3D; expires=Tue, 17-May-2016 01:09:18 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:12:13 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IlRvK1oxcGtEVUtlQVdUWHRcL0t1SitnPT0iLCJ2YWx1ZSI6IjBEZWs3XC8zRjZlNnNnckJHTzdOcmhzTXljUTQ5S2NBQjdORWNTcTZlZjNTV0Uxa2JUWm56XC9PTWNpTDFRNDJDVlg0T2gzVGFmOXRSaUswZFFMdW04Y1E9PSIsIm1hYyI6IjgwZWMyNDk1YWQ4OTAyNTkzOGZhZTQwN2U5NmQzNzRmMjc1NWRlOTk4NjI5MTAxYzU3MmM2ODI0MTAwYWNhYjMifQ%3D%3D; expires=Tue, 17-May-2016 01:12:14 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:12:28 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IkliTmFDOElocFhBTUZyaytcLzdmU0NBPT0iLCJ2YWx1ZSI6ImlFUXZZQTJYaWVMdk9UVmlRSDhndmwwa0JKR3M5Zk1aSFVGdmR4VWNOZWUxVnZHVzQzXC93V1cyZ2ZYbkErSlpxdHJzK3Fwc003NUYrU1cwOFdGXC9yS0E9PSIsIm1hYyI6Ijk5ZTVjYWUzNTIxZmNlNjMzYTg2MzQwZTY4NzEyMmEzMzk5YTQ4NTVhYTUxMjQ1YWQ5NTczYjQyYzgzMDg5MzkifQ%3D%3D; expires=Tue, 17-May-2016 01:12:28 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJDJJd3QzYjF0akRibjJKRmVab1V2bWVEVjROWTA0YnN6WXJCTXAzcy5vekt5ZVNPZ3hKZVdP
+F-SECRET-KEY:JDJ5JDEwJDIwTE5Pamozak8uZUtEREZVVmwxUmVhQjZZWW5EYXNYYmdmcUY1bmE4U3pXbnVZZFhPWXNx
+
+< HTTP/1.1 400 Bad Request
+< Date: Mon, 16 May 2016 23:12:44 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IkxFSEplWnBYWVFsVXVta0FkSmJmWmc9PSIsInZhbHVlIjoiZ20xTXZRM1E0clZIUmdnVllEZWp4ajcrNEdLRTlHdkhJWWk0bVF4VUxzakxHbWtudUVFTHRWdnBwSkZMTkZIM3hpZGo3RGtza1JsQ3hnYUpzTHlwakE9PSIsIm1hYyI6IjQ0ZjE3MmNmZDI3OWI1NjM2ODM5MjMwZTczYTQwNmVlOTQyZGYzMWJhMjJlODg4NzJkNGNiZjlmOGI4MjJlMDMifQ%3D%3D; expires=Tue, 17-May-2016 01:12:44 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 205
+< Connection: close
+< Content-Type: application/json
+< 
+* Closing connection 0
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/invoices HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Mon, 16 May 2016 23:13:39 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IkZTSjJSbW83TXFjZ1JxUDIxcHdjN1E9PSIsInZhbHVlIjoiUjBZY2dyb1dnWTVRc2hlVXdnN0hZQlA5ZHl6eWlcL01qcXBZUkFQWmFXeDFud1liVmM5OExBa3QzWU5rdWgxUnFKb0hqR2xDRTRlU1d1SVwvWmw2TFpJQT09IiwibWFjIjoiNDE5ZThkNmJiNDg3Y2JiYzA1ZTUwZDVlOGEzZDEwMGRhYjE3Y2FlYTNiODJkM2I4NzE1ZTkxMTMwMTE4ZTY4MiJ9; expires=Tue, 17-May-2016 01:13:39 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Transfer-Encoding: chunked
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/clients/SOOP900901770 HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Mon, 16 May 2016 23:17:18 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6ImZISENBclI0QkpreHFVcHgxdE90dUE9PSIsInZhbHVlIjoicnR2TXNnNHZFWmlTc21ocGxRWFNXOElLbktVZ0krRm52WTB5WVpxTU1BKzNcL3ZsWVJyRGxvWDB1SXJHNzBoXC9abnB0bmxOXC9vOHJVYUlcL2x4Y1ZHQnRnPT0iLCJtYWMiOiJiZmY0MDU0MTE3ZDVmOGU4NTg5NjBiYTBmYzdmZDQyNjllYjllZDYxNjk3M2Y1NzYwODU0ZmUxYjJjN2ZmMDIzIn0%3D; expires=Tue, 17-May-2016 01:17:19 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 395
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+* Hostname in DNS cache was stale, zapped
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> POST /api/v1/clients/5682d59094b9e/update HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+Content-Length:351
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+* upload completely sent off: 351 out of 351 bytes
+< HTTP/1.1 201 Created
+< Date: Mon, 16 May 2016 23:17:37 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IkYwYlVMUEl4R1hKM3UxVWQyeEZCdHc9PSIsInZhbHVlIjoiSHIrM01XT05UYVlrTnF0WHB0cUMzR3ExNTM0NW9BK2FHN2VWNzNSNWF3OWhva1YxZGg2RTFSUXl3eDVab2xNaG8zUU1kQWNEb2ZubDZFdXFzdHptVUE9PSIsIm1hYyI6ImI4ZTgxZWRhOTA3ZDQ0ZmZhMWFmZTZhNzQ5OTYwODk4OWVhNTM5NThmNTI5NDU5YjE2MjJjOWNlNzFjYjA4NTgifQ%3D%3D; expires=Tue, 17-May-2016 01:17:37 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/clients/SOOP900901770 HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:13:39 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IlNDTDUxRkM4bk9rWlg5WGlaZzk0MXc9PSIsInZhbHVlIjoicFhMZ0FoU25NbTFTU2tQTXZlUzc1WnFXQUg2VUdiWjE2QzUrbkNHZ1dKRGExXC9pY3I4SDVHbVhIbzllT2RGSW1BNlRCTDhlVHRHY3h2OXdlU3VEVmhnPT0iLCJtYWMiOiI0ZjgyOWM1M2RjYmQ4YWYxM2VmZTM2MjZkNDNmZmQ5N2M5M2IzMDg3NzM0ZGUyZWI1MWM2NmQ3YTFkMjE2MGE4In0%3D; expires=Tue, 17-May-2016 03:13:40 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/clients/SOOP900901770 HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:30:56 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6ImNUQmJCOE1PeTJqTWtLTSsxZ0VTZGc9PSIsInZhbHVlIjoiWWVzQ1VjMGxHN1JlTUxkeXFGZ0xyKytyVVJxenUzWkoxUzhvc3NvNFJBZm1EbGVTNjFcLzZzUUU5dG9UbjZJZFZSWGVsOHJqQ3NRK3BkZ3lxenhpSCtRPT0iLCJtYWMiOiI3ZjVlMDQ3ODk4MDNlZjkyMDEyMTVkNDZkM2M0OWNlZDVmYTcyMWZhOGZlMGExMjczNzQyNzA2ZjM4NmFlYjliIn0%3D; expires=Tue, 17-May-2016 03:30:56 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+* Hostname devfactura.in was found in DNS cache
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> POST /api/v1/clients/create HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+Content-Length:351
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+* upload completely sent off: 351 out of 351 bytes
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:31:02 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IjhrQmNoZEt2K3pSeU96YzBMem1VUFE9PSIsInZhbHVlIjoiVkRhY3UwbjhlM1pJZUJDVDVEamdmV1RpQmk2RHhucnlreUNweXQzRWxld21qSWNxRTRJZFVyeDZRdUJiTFhxMWdQXC9KcXBWcVpYdFdVVzhBQ2I1eWhnPT0iLCJtYWMiOiI4MDM4NTdhNWE1YTAzNzZlN2M0MGRhZjQ2YzllMGI4ZTNiNTRkZmY1ZTZmNWM3ZmE5ODdhYjI0NWM3YWVjYTdiIn0%3D; expires=Tue, 17-May-2016 03:31:02 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/clients/SOOP900901770 HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:32:43 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IjVacisySzNsZ1dCbHZxRFl4ejIwR0E9PSIsInZhbHVlIjoiaWltbk5DMitLU0RLd0NTbTFPOWFcL0lBUjZTbGx4eE1jenVWbzhqNHB3ajY1TnArQkVqVUpTdnRSMXpiRTRpSG1ZT05kcHhZMlBcL2tpejdocU1IVHpNZz09IiwibWFjIjoiMjJlMWNkYzk0ZGY2MjNkMzM4YzQ0ZDM4ODM2NTY0MzQ5YmYzYmVlODQ5ODZlNzBmOGNiMWQ3ZmI4NDExNDJmYyJ9; expires=Tue, 17-May-2016 03:32:43 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+* Hostname in DNS cache was stale, zapped
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> POST /api/v1/clients/create HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+Content-Length:351
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+* upload completely sent off: 351 out of 351 bytes
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:32:49 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6InE5aTZQR29FTjJmYkdKYzJEZjh1OXc9PSIsInZhbHVlIjoiVFwvSWZtU3RmMlRMb0Q4RVA2RFwvU2toVWJXWWw4ekNiUklzQSs1Mm5ONDI2bjFFTFhXTEZwTFpBeXhMMEJYVFJJSEZrNHZhaytxNUw5TDlkcjlcL1NuQUE9PSIsIm1hYyI6IjUzNDNkYTM3M2VmNWRmZGQ4NDdjZDk5NjRmNTgxYTBkMjgwYjAxOWIyNTc5ODM1YmI1MTNkNzc2Yzk1ZmU3NjUifQ%3D%3D; expires=Tue, 17-May-2016 03:32:49 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/clients/SOOP900901770 HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:34:02 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6Im1FNlMrTU05WThnTEg2bFZoWnNNMHc9PSIsInZhbHVlIjoiOHhqcVIrcVFmVmp6bFphelpSbzRIejJpYXRMaWRhdzg5Yjl4N0g2RE1Db2NOSXZkcFwvZUsyaXQ5SWtzdmxKa2ZoaXNoQWpwZktEWEFJbjVCR3d4SnJRPT0iLCJtYWMiOiI0ZGZhMWJkYzAzZWQ4ZTk5YzM0ZDFlZWE2ODA1YmZmNzEwZmYwMTZhZWVkMWU2Mzk4ZTEyN2IxNzJkZGE2YzJhIn0%3D; expires=Tue, 17-May-2016 03:34:02 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+* Hostname devfactura.in was found in DNS cache
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> POST /api/v1/clients/create HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+Content-Length:351
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+* upload completely sent off: 351 out of 351 bytes
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:34:07 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6Im15dHBFTEQ3cWUrNnNmeTdLK1JUWFE9PSIsInZhbHVlIjoiMXY5N200ZURxWjV4dWZBdktodlNUVEtjNkJGdHhPWXpMY2lnd0JEMU1HU3ZHcDVkdU5JMmM1aGtHSmt3Rk1uR2ZSXC9Ta0hneGxnU0tvSWFYakwyaUxBPT0iLCJtYWMiOiI2Y2ZjYTM2Nzg1NmI2YWY4YzdjYTljYjAyZDM2ZTllMGI2YTU1OGUzYWY0NDQzNTU0YjhiY2ZkMmU2OWRkZDAzIn0%3D; expires=Tue, 17-May-2016 03:34:07 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/clients/SOOP900901770 HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:34:58 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6InB2ZTN5djhQOXM1dHVxam5FZlI1WGc9PSIsInZhbHVlIjoiVHdWM1dzeUVEc1F2QmRNMVE5SDFYdklWeUFjWEFybnF4T0YzQ3NvZVFqN0dJdVk3Z3d4cStQXC9YcW9HMTRWeDlpS25OUm1VQ1JwcWZZRWs1cVwvb0NnQT09IiwibWFjIjoiY2JhZmJmNzQ2ODZhODkxMTliZDM2M2RlNTUzOGRmYzg5ZGMxZDQxZDYzNGJhMjViZGM1OTRiMDdmMjdkYzk5NSJ9; expires=Tue, 17-May-2016 03:34:58 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+* Hostname devfactura.in was found in DNS cache
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> POST /api/v1/clients/create HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+Content-Length:351
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+* upload completely sent off: 351 out of 351 bytes
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:35:03 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IlpMVkRseGM0ZlU0OGlFaFhaOHkyaWc9PSIsInZhbHVlIjoiZE0xWmZSTmF5S2dTdk9GVUl3ZitQdFdTQ25zQTE3QTR1T3dFRnVPakc2YkdGZ0FBa1F5OER3VnBLN2JWV1c0NFwvckF2Q1wvNjljUzNrVVdLcE12OFo3UT09IiwibWFjIjoiMWFhOTg1ZGMzZWUxODZhYWM0YTI3ZTQ0YzM5MTJiZDMzY2ZiN2E4Nzk3ZDcwODViZGFkNjNhYmE3ODlmZGM3NiJ9; expires=Tue, 17-May-2016 03:35:03 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/clients/SOOP900901770 HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:39:53 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IlcxYUxOOTJyQzVTSlcxdjliYmF5ckE9PSIsInZhbHVlIjoiZDBiT1NXSzgyRWVQaU1lTkVuOEhWV1l5UnZYcWN0V0g5R2Q3MDJ4dEE0b25IejRzblR5cjliMHlqOXhMWlVYMkc1UTQycm1GdnZYY3Z6cXJMeEYydFE9PSIsIm1hYyI6ImMxN2FlNGZkNDdjNGRkOTQxNjAzOWI0YzM1OWQ4ZDI1ZDgzMGRiOGZhMWJhY2UzOWFhNzUxZWRjMjgzNzgxNzcifQ%3D%3D; expires=Tue, 17-May-2016 03:39:53 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+* Hostname devfactura.in was found in DNS cache
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> POST /api/v1/clients/create HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+Content-Length:351
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+* upload completely sent off: 351 out of 351 bytes
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:39:58 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IkM2eDVCRFwvOFwvOTZMY09zdm12Y2E4Zz09IiwidmFsdWUiOiJ2VWdLQ3M5WjhnUnBVVjB3dHNZTU54WjlaTzBKTnM1V3R3TVBEc1hVV0psNnJneG1QMzVVVVlKYlwvTG5wK1kxTVZpdFF3NzBqTkhDRVIwTmlpYmpWZ2c9PSIsIm1hYyI6ImMxMDZmOWI3ZmE4YmFjZGQ3Y2U5N2UwNjU5MGVkYjg1YTM1OTA1ZDZkNDZmMDI5MDc1NTM3Yjg2NWJiYzRjNTEifQ%3D%3D; expires=Tue, 17-May-2016 03:39:58 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> GET /api/v1/clients/SOOP900901770 HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:41:17 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IjhMMitNSjZjYlwvOWNoYlJIV24xRUlBPT0iLCJ2YWx1ZSI6IjE3M3FaVnZyN3FHb3dWT3FiVEsyMW0wXC9qRzJiTlhCcjFNV0FJUVVtUEoxRjBWZ084UzhaNU9XeEhFQ3VJM1dzem9pR1F1N3REek9VNDVyaWkxdE5vdz09IiwibWFjIjoiZjQ5NDZhNTg0Y2YzMzAyZWQ2MWZkMGQ3MjRiNzBkNzg5OTM3NGUwYzk5YWM0YjAxYTgyOTg0ZjJhN2NhNjZiNCJ9; expires=Tue, 17-May-2016 03:41:17 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
+* Hostname devfactura.in was found in DNS cache
+*   Trying 174.136.25.67...
+* Connected to devfactura.in (174.136.25.67) port 80 (#0)
+> POST /api/v1/clients/create HTTP/1.1
+Host: devfactura.in
+Accept: */*
+Content-Type: application/json
+Content-Length:351
+F-API-KEY:JDJ5JDEwJE5yUVN2VHcxNExDbGw4RXVtekpUb3VqSE51L253TGJZazBLM20veFNWakJrRVJYQWZ1TEwu
+F-SECRET-KEY:JDJ5JDEwJFZYcVRtenh5cDlGbWhiTVovMVEvMHVtaEZieDdzWmJkV0hnR1gzZlhtNW1CSGI1cXBDYTk2
+
+* upload completely sent off: 351 out of 351 bytes
+< HTTP/1.1 200 OK
+< Date: Tue, 17 May 2016 01:41:22 GMT
+< Server: Apache
+< X-Powered-By: PHP/5.5.31
+< Cache-Control: no-cache
+< Set-Cookie: laravel_session=eyJpdiI6IlJSM01qRVRDTDVLZG9QQnN5QjdLQ2c9PSIsInZhbHVlIjoiVmgzajZaUDFpR211S3I2bE5DbkFmelF2dlBxWmdWYUloNHpLT3loT0JGWE9aRHI0K0haXC9lNlFWa3BlTk9jXC9Yb3lXVElcL3BCbGl1RHlVNENXTHFvaEE9PSIsIm1hYyI6IjgyMDM1YmZhMjhiODM2N2Q1MjUyZTAyMmM4YjlkYTRiYmI3ZmY0OWI2Nzg5ODhkOWE5ZWJiYjBjYzMxZDFjYTgifQ%3D%3D; expires=Tue, 17-May-2016 03:41:23 GMT; Max-Age=7200; path=/; httponly
+< Vary: Accept-Encoding
+< Content-Length: 397
+< Content-Type: application/json
+< 
+* Connection #0 to host devfactura.in left intact
