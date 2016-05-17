@@ -113,7 +113,7 @@ function facturacom_history(){
     $index    = 0;
     $settings = FacturaWrapper::getConfigEntity();
     ?>
-    <h1><strong><?php echo (!isset($invoices->data)) ? count($invoices->data) : 0 ?></strong> facturas en sistema.</h1>
+    <h1><strong><?php echo ($invoices->status == 'success') ? count($invoices->data) : 0 ?></strong> facturas en sistema.</h1>
     <table class="wp-list-table widefat fixed striped posts" id="invoicesTable">
         <thead>
             <th>Folio</th>
@@ -127,7 +127,7 @@ function facturacom_history(){
             <th>Opciones</th>
         </thead>
         <tbody>
-            <?php if(!isset($invoices->data)): ?>
+            <?php if($invoices->status == 'success'): ?>
                 <?php foreach ($invoices->data as $invoice): ?>
                 <tr>
                     <td><?php echo $invoice->Folio ?></td>
@@ -157,7 +157,7 @@ function facturacom_history(){
             <?php else: ?>
                 <tr>
                     <td colspan="9" align="center">
-                        No hay información disponible
+                        No hay información disponible :(
                     </td>
                 </tr>
             <?php endif ?>
