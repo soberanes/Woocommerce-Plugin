@@ -5,7 +5,7 @@ class CommerceHelper{
     static function getOrderById($orderId){
         // $order = new WC_Order($orderId);
         $order = wc_get_order($orderId);
-        $order_post = get_post( $order_id );
+        $order_post = get_post( $orderId );
 
         $order_data = array(
           'id'                        => $order->id,

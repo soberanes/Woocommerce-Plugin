@@ -388,29 +388,36 @@ function step_one_callback(){
     $customerData = FacturaWrapper::getCustomer($customerRfc);
     $orderData    = FacturaWrapper::getOrder(trim($_POST['order']));
 
-    $orderEmail = trim($_POST['email']);
-    $validate = FacturaWrapper::validateOrder($orderData, $orderEmail, $customerRfc);
-
-    if($validate['Error'] == true){
+    if($orderData->status == false){
         $response = array(
             'success' => false,
-            'message' => $validate['Message'],
-            'metadata' => (isset($validate['Meta'])) ? $validate['Meta'] : null,
+            'message' => 'No existe un pedido con este número.'
         );
     }else{
-        FacturaWrapper::saveCookies('customer', $customerData);
-        FacturaWrapper::saveCookies('order', $orderData);
+        $orderEmail = trim($_POST['email']);
+        $validate = FacturaWrapper::validateOrder($orderData, $orderEmail, $customerRfc);
 
-        if($customerData->status == "error"){
-            $customerResponse = $customerData;
+        if($validate['Error'] == true){
+            $response = array(
+                'success' => false,
+                'message' => $validate['Message'],
+                'metadata' => (isset($validate['Meta'])) ? $validate['Meta'] : null,
+            );
         }else{
-            $customerResponse = FacturaWrapper::getCookies('customer')->Data;
-        }
+            FacturaWrapper::saveCookies('customer', $customerData);
+            FacturaWrapper::saveCookies('order', $orderData);
 
-        $response = array(
-            'success' => true,
-            'customer' => $customerResponse,
-        );
+            if($customerData->status == "error"){
+                $customerResponse = $customerData;
+            }else{
+                $customerResponse = FacturaWrapper::getCookies('customer')->Data;
+            }
+
+            $response = array(
+                'success' => true,
+                'customer' => $customerResponse,
+            );
+        }
     }
 
     echo json_encode($response, JSON_PRETTY_PRINT);
