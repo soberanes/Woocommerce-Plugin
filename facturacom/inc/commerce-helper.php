@@ -84,6 +84,24 @@ class CommerceHelper{
           );
         }
 
+        // add shipping as a product
+        foreach($order->get_items('shipping') as $shipping_key => $shipping_item){
+            if($shipping_item['method_id'] != 'free_shipping'){
+                $order_data['line_items'][] = array(
+                    'id'         => $shipping_key,
+                    'subtotal'   => wc_format_decimal($shipping_item['cost'], 2),
+                    'total'      => wc_format_decimal($shipping_item['cost'], 2),
+                    'total_tax'  => null,
+                    'price'      => wc_format_decimal($shipping_item['cost'], 2),
+                    'quantity'   => 1,
+                    'tax_class'  => null,
+                    'name'       => $shipping_item['name'],
+                    'product_id' =>$shipping_key,
+                    'sku'        => $shipping_item['method_id'],
+                );
+            }
+        }
+
         return (object)$order_data;
     }
 
