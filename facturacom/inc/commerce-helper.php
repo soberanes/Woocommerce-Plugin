@@ -75,7 +75,7 @@ class CommerceHelper{
             'subtotal'   => wc_format_decimal( $order->get_line_subtotal( $item ), 2 ),
             'total'      => wc_format_decimal( $order->get_line_total( $item ), 2 ),
             'total_tax'  => wc_format_decimal( $order->get_line_tax( $item ), 2 ),
-            'price'      => wc_format_decimal( $order->get_item_total( $item ), 2 ),
+            'price'      => wc_format_decimal( $order->get_item_total( $item ), 2 ) + wc_format_decimal( $order->get_line_tax( $item ), 2 ),
             'quantity'   => (int) $item['qty'],
             'tax_class'  => ( ! empty( $item['tax_class'] ) ) ? $item['tax_class'] : null,
             'name'       => $item['name'],
@@ -86,13 +86,14 @@ class CommerceHelper{
 
         // add shipping as a product
         foreach($order->get_items('shipping') as $shipping_key => $shipping_item){
+
             if($shipping_item['method_id'] != 'free_shipping'){
                 $order_data['line_items'][] = array(
                     'id'         => $shipping_key,
                     'subtotal'   => wc_format_decimal($shipping_item['cost'], 2),
                     'total'      => wc_format_decimal($shipping_item['cost'], 2),
-                    'total_tax'  => null,
-                    'price'      => wc_format_decimal($shipping_item['cost'], 2),
+                    'total_tax'  => round($order->order_shipping_tax, 2),
+                    'price'      => wc_format_decimal($shipping_item['cost'], 2) + round($order->order_shipping_tax, 2),
                     'quantity'   => 1,
                     'tax_class'  => null,
                     'name'       => $shipping_item['name'],

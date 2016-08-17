@@ -50,7 +50,7 @@ jQuery(document).ready( function($) {
             }
 
             form_data = $('#facturacom_settings').serializeArray();
-
+            console.log(form_data);
             data = {
               action      : 'save_config',
               apikey      : form_data[0].value,
@@ -243,6 +243,20 @@ jQuery(document).ready( function($) {
         }
     });
 
+    $('#f-num-cta').bind('keypress', function (evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        
+        if (iKeyCode != 8 && iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+
+        var val_length = $(this).val().length;
+        if(val_length >= 4)
+            return false;
+
+        return true;
+    });
+
     $('#step-two-button-edit').click(function(e){
       e.preventDefault();
       var b = $(this).attr('data-b');
@@ -286,7 +300,6 @@ jQuery(document).ready( function($) {
     }
 
     function fillInvoiceContainer(order_data, customer_data, emisor_data){
-
         $('#invoice-id').hide();
         $('#invoice-date').hide();
         //receptor
@@ -307,6 +320,15 @@ jQuery(document).ready( function($) {
             $('#emisor-direccion-zone-city').text(emisor_data.address3);
         }
 
+        var settingTaxes = $('#settingTaxes').val();
+        // if(settingTaxes == 1){
+            calculate_tax = 0.16;
+        // }else{
+        //     calculate_tax = 0;
+        // }
+
+        tax = Number(1 + calculate_tax); //1.16 or 1
+
         //products
         var subtotal = 0;
         var taxes    = 0;
@@ -321,7 +343,7 @@ jQuery(document).ready( function($) {
             }
 
             if(discount <= 0){
-              unit_price = Number(products[key]['price'] / 1.16);
+              unit_price = Number(products[key]['price'] / tax);
             }else{
               unit_price = Number(products[key]['subtotal']/products[key]['quantity']);
             }
@@ -346,7 +368,13 @@ jQuery(document).ready( function($) {
         $('#datails-body').html(r.join(''));
 
         var grand_total = Number(order_data.total);
-        var total_iva = grand_total * 0.16;
+        // if(tax == 0){
+        //     var total_iva = grand_total;
+        // }else{
+        //
+        //     var total_iva = grand_total * 0.16;
+        // }
+        var total_iva = grand_total;
         var payment_method;
 
         if(order_data.payment_details.method_id == "paypal"){
@@ -356,19 +384,19 @@ jQuery(document).ready( function($) {
         }
 
       if(discount > 0){
-          pre_total = Number((subtotal-discount)/1.16);
+          pre_total = Number((subtotal-discount)/tax);
           total_iva = Number((subtotal-discount) - pre_total);
           total = Math.round(pre_total + total_iva);
 
-          console.log("pre_total: " + pre_total);
+        //   console.log("pre_total: " + pre_total);
 
           $('#td-discount #invoice-discount').text('$'+discount.formatMoney(2, '.', ','));
           $('#td-discount').css({'display':'table-row'});
 
 
       }else{
-          total_iva = subtotal*0.16;
-          total = Math.round(subtotal+total_iva);
+          total_iva = grand_total-subtotal;
+          total = Number(subtotal+total_iva);
       }
 
 
@@ -737,7 +765,7 @@ jQuery(document).ready( function($) {
     $("#select-payment").change(function(){
          var selected_method = $( "#select-payment option:selected" ).val();
 
-         if(selected_method == 4 || selected_method == 5){
+         if(selected_method == 2 || selected_method == 3 || selected_method == 4 || selected_method == 28 || selected_method == 29){
            $("#num-cta-box").fadeIn('fast');
          }else{
            $("#num-cta-box").fadeOut('fast');

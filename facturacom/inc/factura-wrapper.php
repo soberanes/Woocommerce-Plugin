@@ -223,18 +223,22 @@ class FacturaWrapper{
                                                 <div class="input-group">
                                                   <label for="select-payment">* M&eacute;todo</label>
                                                   <select id="select-payment" class="input-cap f-input f-select">
-                                                    <option value="0">Selecciona una opción</option>
-                                                    <option value="1">PayPal</option>
-                                                    <option value="2">Depósito en Cuenta</option>
-                                                    <option value="3">Efectivo</option>
-                                                    <option value="4">Pago con Tarjeta</option>
-                                                    <option value="5">Transferencia Electrónica</option>
+                                                      <option value="01">Efectivo</option>
+                                                      <option value="02">Cheque nominativo</option>
+                                                      <option value="03">Transferencia electrónica de fondos</option>
+                                                      <option value="04">Tarjeta de crédito</option>
+                                                      <option value="05">Monedero electrónico</option>
+                                                      <option value="06">Dinero electrónico</option>
+                                                      <option value="08">Vales de despensa</option>
+                                                      <option value="28">Tarjeta de débito</option>
+                                                      <option value="29">Tarjeta de servicio</option>
+                                                      <option value="99">Otros</option>
                                                   </select>
                                                 </div>
                                                 <div class="clearfix"></div>
                                                 <div id="num-cta-box" class="input-group">
                                                   <label for="f-num-cta" style="width: 285px;">&Uacute;ltimos 4 dígitos de tu cuenta o tarjeta</label>
-                                                  <input type="text" class="input-cap f-input f-no-top f-bottom f-digits" id="f-num-cta" name="f-num-cta" value="" placeholder="####" />
+                                                  <input type="text" class="input-cap f-input f-no-top f-bottom f-digits" id="f-num-cta" name="f-num-cta" value="" placeholder="####" min="4" max="4"/>
                                                 </div>
                                                 <div class="clearfix"></div>
                                               </form>
@@ -610,9 +614,15 @@ class FacturaWrapper{
         $customer = $_SESSION['customer'];
 
         $items = array();
+
         foreach($order->line_items as $item){
             $unidad = ($item["product_id"] == 31) ? "Servicio" : "Producto";
-            $product_price = ($item["subtotal"]/$item["quantity"]) / 1.16;
+            // if(CommerceHelper::includeTax()){
+            //     $product_price = ($item["subtotal"]/$item["quantity"]) / 1.16;
+            // }else{
+            //     $product_price = ($item["subtotal"]/$item["quantity"]);
+            // }
+            $product_price = ($item["price"]/$item["quantity"]) / 1.16;
 
             $product = array(
                 "cantidad"  => $item["quantity"],
@@ -626,20 +636,18 @@ class FacturaWrapper{
         }
 
         //payment method
-        if($payment_data["method"] == 1 || $payment_data["method"] == 2 || $payment_data["method"] == 3){
-          $payment_method = "No Identificado";
-          $numero_cuenta  = "No identificado";
+        if($payment_data["account"] == ''){
+          $num_cta = 'No Identificado';
         }else{
-          $payment_method = $payment_data["method_text"];
-          $numero_cuenta  = $payment_data["account"];
+          $num_cta = $payment_data["account"];
         }
 
         $params = array(
           "rfc"           => $customer->RFC,
           "items"         => $items,
-          "numerocuenta"  => $numero_cuenta,
+          "numerocuenta"  => $num_cta,
           "formapago"     => "Pago en una Sola Exhibición",
-          "metodopago"    => $payment_method,
+          "metodopago"    => $payment_data["method"],
           "currencie"     => $order->currency,
           "iva"           => 1,
           "num_order"     => $order->id,
