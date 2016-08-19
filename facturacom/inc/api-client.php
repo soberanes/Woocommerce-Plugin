@@ -32,6 +32,7 @@ class WrapperApi{
             curl_setopt($ch, CURLOPT_HTTPHEADER, array(
                 'Content-Type: application/json',
                 'Content-Length:' . strlen($dataString),
+                'F-PLUGIN: b2b0f61828f85dedb83c08e6d07cf71ce964a99c',
                 'F-API-KEY:' . $configEntity['apikey'],
                 'F-SECRET-KEY:' . $configEntity['apisecret']
             ));
